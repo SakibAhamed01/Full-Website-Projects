@@ -1,0 +1,25 @@
+config:
+  dns:
+    threads: 25
+    brute_threads: 1000
+  modules:
+    github:
+      api_key: ''
+    chaos:
+      api_key: ''
+    securitytrails:
+      api_key: ''
+    iis_shortnames:
+      detect_only: false
+  web:
+    spider_distance: 1
+    spider_depth: 4
+flags:
+- iis-shortnames
+- subdomain-enum
+- web-basic
+- web-paramminer
+modules:
+- httpx
+output_modules:
+- subdomains
